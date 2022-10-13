@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.global.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Vue Js</h1>
+    </header>
+
+    <div id="app">
+        <p>{{ msg }}</p>
+        
+        <h3>This is {{ info.name }} <br> <br>
+        My facebook link is <a v-bind:href="info.facebook">here</a> 
+        <!-- we can also use here :href -->
+        </h3>
+        <h4>The html code is: {{ htmlCode }}</h4>
+
+        <h5 v-html="htmlCode"></h5>
+
+        <h4>The current time is: {{ getCurrentTime() }}</h4>
+
+        <h3>Counter = {{ count }}</h3>
+        <button v-on:click="increase()">Increment 1</button>
+        <button v-on:click="increase1(2)">Increment 2</button>
+        <!-- <button @click="increase()">Increment</button> -->
+        <button v-on:click="decrease()">Decrement 1</button>
+        <hr>
+        <button @click="test">Click here</button>
+    </div>
+
+
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
