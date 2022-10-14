@@ -11,12 +11,12 @@
 </head>
 <body>
     <div id="app">
-        <h3>Enter Your Name</h3>
-        <!-- <input type="text" @keyup="handleKey"> -->
-        <input type="text" @keyup.enter="handleKey">
-        <p>Welcome {{ name }}!</p>
-        <!-- <div class="card" @click="handleCardClick"></div> -->
-        <div class="card" @click.right="handleCardClick"></div>
+        <button :class ="{active:activeClass == 'red'}" @click="setClass('red')">Red</button>
+        <button :class ="{active:activeClass == 'green'}" @click="setClass('green')">Green</button>
+        <button :class ="{active:activeClass == 'blue'}" @click="setClass('blue')">Blue</button>
+        <hr><br>
+        <div :class="activeClass"></div>
+        
     </div>
 
 

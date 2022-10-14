@@ -11,12 +11,9 @@
 </head>
 <body>
     <div id="app">
-        <h3>Enter Your Name</h3>
-        <!-- <input type="text" @keyup="handleKey"> -->
-        <input type="text" @keyup.enter="handleKey">
-        <p>Welcome {{ name }}!</p>
-        <!-- <div class="card" @click="handleCardClick"></div> -->
-        <div class="card" @click.right="handleCardClick"></div>
+        <input type="text" v-model="number" placeholder="Enter 11 digit mobile number"><br>
+        <input type="text" v-model="name.firstName" placeholder="Enter first name">
+        <input type="text" v-model="name.numlastNameber" placeholder="Enter last name">
     </div>
 
 

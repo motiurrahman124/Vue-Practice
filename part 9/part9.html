@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <button @click="toggle">Show/Hide</button>
+        <!-- <div class="card" v-show="show"> -->
+        <div class="card" v-if="show">
+        </div>
+
+        <hr><br><br>
+        <h3>Skills</h3>
+        <ul>
+                <!-- <li v-for="skill of skills">{{ skill }}</li><br><hr><br> -->
+            <li v-for="(skill,i) in skills":key="skill.name">
+                <p>
+                    {{ i+1 }}. Skill: {{ skill.name }}-- Experience: {{ skill.experience }} years--
+                    <span v-if="skill.experience<3" >Beginer</span>
+                    <span v-else-if="skill.experience<5">Intermediate</span>
+                    <span v-else="">Expert</span>
+                    <br>
+                </p>
+                
+            </li>
+            
+            
+            
+        </ul>
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

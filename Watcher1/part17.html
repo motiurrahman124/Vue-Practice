@@ -11,12 +11,10 @@
 </head>
 <body>
     <div id="app">
-        <h3>Enter Your Name</h3>
-        <!-- <input type="text" @keyup="handleKey"> -->
-        <input type="text" @keyup.enter="handleKey">
-        <p>Welcome {{ name }}!</p>
-        <!-- <div class="card" @click="handleCardClick"></div> -->
-        <div class="card" @click.right="handleCardClick"></div>
+        <input type="text" v-model="firstName" placeholder="Enter first name">
+        <input type="text" v-model="lastName" placeholder="Enter last name">
+        <br>
+        <h3>Your full name is: {{ fullName }}</h3>
     </div>
 
 

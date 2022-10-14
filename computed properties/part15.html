@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" placeholder="Write your review" v-model="review">
+        <h3>Skills</h3>
+        <ul>
+                <!-- <li v-for="skill of skills">{{ skill }}</li><br><hr><br> -->
+            <li v-for="(skill,i) in skills" @click="removeSkill(i)":key="skill.name">
+                <p>
+                    {{ i+1 }}. Skill: {{ skill.name }}-- Experience: {{ skill.experience }} years
+                    
+                </p>  
+            </li>      
+        </ul>
+
+        <h3>Total skill: {{ totalCount1 }}</h3>
+        <h3>Total skill: {{ totalCount() }}</h3>
+
+        <h3>Experienced Skills</h3>
+        <ul>
+                <!-- <li v-for="skill of skills">{{ skill }}</li><br><hr><br> -->
+            <li v-for="(skill,i) in experiencedSkills" @click="removeSkill(i)":key="skill.name">
+                <p>
+                    {{ i+1 }}. Skill: {{ skill.name }}-- Experience: {{ skill.experience }} years
+                    
+                </p>  
+            </li>      
+        </ul>
+        
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
